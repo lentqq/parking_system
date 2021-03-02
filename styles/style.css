@@ -1,24 +1,17 @@
 body {
     display: grid;
-    grid-template-areas:
-        "header header header"
-        "nav article ads"
-        "footer footer footer";
+    grid-template-areas: "header header header" "nav article ads" "footer footer footer";
     grid-template-rows: 80px 1fr 70px;
-    grid-template-columns: 20% 1fr 15%;
+    grid-template-columns: 30% 1fr 15%;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     height: 100vh;
     margin: 0;
 }
 
-header,
-footer,
-article,
-nav,
-div {
+header, footer, article, nav, div {
     padding: 1.2em;
-    background: #fff573;
+    background: #d4d8d8;
 }
 
 #pageHeader {
@@ -34,22 +27,44 @@ div {
 }
 
 #mainNav {
+    display:grid;
+    box-sizing: border-box;
     grid-area: nav;
+    text-align:start;
 }
 
 #siteAds {
     grid-area: ads;
 }
 
+#grid {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+
+#grid>div {
+    background-color: #02dbb3;
+    color: white;
+    font-size: 2vw;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.cell {
+    background-color: #02dbb3;
+    color: white;
+    font-size: 2vw;
+    padding: 5px;
+    border-radius: 8px;
+}
+
 /* Stack the layout on small devices/viewports. */
+
 @media all and (max-width: 575px) {
     body {
-        grid-template-areas:
-            "header"
-            "article"
-            "ads"
-            "nav"
-            "footer";
+        grid-template-areas: "header" "article" "ads" "nav" "footer";
         grid-template-rows: 80px 1fr 70px 1fr 70px;
         grid-template-columns: 1fr;
     }
