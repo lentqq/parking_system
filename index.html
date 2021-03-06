@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/style.css">
     <title>Parking system</title>
 
@@ -17,59 +22,53 @@
     <article id="mainArticle">
         <h2>Парко места</h2>
         <div id="grid">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div>29</div>
-            <div>8</div>
-            <div>54</div>
-            <div>46</div>
-            <div>33</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div>34</div>
-            <div></div>
-            <div>56</div>
-            <div>48A</div>
-            <div>35</div>
-            <div>18</div>
-            <div>63</div>
-            <div>72</div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div>41M</div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell">29</div>
+            <div class="cell">8</div>
+            <div class="cell">54</div>
+            <div class="cell">46</div>
+            <div class="cell">33</div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell">34</div>
+            <div class="cell"></div>
+            <div class="cell">56</div>
+            <div class="cell">48A</div>
+            <div class="cell">35</div>
+            <div class="cell">18</div>
+            <div class="cell">63</div>
+            <div class="cell">72</div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell">41M</div>
         </div>
     </article>
     <nav id="mainNav">
-        <!-- <h2>Списък на влезли коли:</h2> -->
-        <section class="section-center">
-            <!-- form -->
-            <form class="grocery-form">
-                <p class="alert"></p>
-                <h2>Влезли коли:</h2>
-                <div class="form-control">
-                    <input type="text" id="grocery" placeholder="Въведете рег. номер на кола" />
-                    <button type="submit" class="submit-btn">Запиши</button>
-                </div>
-            </form>
-            <!-- list -->
-            <div class="grocery-container">
-                <div class="grocery-list"></div>
-                <button class="clear-btn">Изчисти списък</button>
+        <form>
+            <h2>Влезли коли</h2>
+            <input type="text" class="car-input" />
+            <button class="car-buton" type="submit">
+                <i class="fas fa-plus-square"></i>
+            </button>
+            <div class="car-container">
+                <ul class="car-list"></ul>
             </div>
-        </section>
-        </nav>
-        <div id="siteAds">
-            <h2>Легенда:</h2>
-        </div>
-        <footer id="pageFooter">
-            <h2>Footer</h2>
-        </footer>
+        </form>
+    </nav>
+    <article id="siteAds">
+        <h2>Легенда</h2>
+    </article>
+    <footer id="pageFooter">
+        <h2>Footer</h2>
+    </footer>
 
-        <!-- javascript -->
-        <script src="app.js"></script>
-    </body>
+    <!-- javascript -->
+    <script src="./app.js"></script>
+</body>
+
 </html>
