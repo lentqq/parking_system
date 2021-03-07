@@ -87,6 +87,54 @@ form>h2 {
     border-radius: 8px;
 }
 
+.car-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-list {
+    min-width: 70%;
+    list-style: none;
+}
+
+.car {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.car li {
+    flex:none;
+}
+
+.car-item {
+    padding: 0rem, 0.5rem;
+}
+
+.fa-trash {
+    pointer-events: none;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.trash-btn {
+    background: #02dbb3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+    font-size: 1rem;
+}
+
 .cell {
     background-color: #02dbb3;
     color: white;

@@ -5,7 +5,7 @@ const carList = document.querySelector('.car-list');
 
 //Event Listeners
 carButton.addEventListener('click', addCar);
-
+carList.addEventListener('click', deleteCar);
 //Functions
 
 function addCar(event) {
@@ -16,7 +16,7 @@ function addCar(event) {
     carDiv.classList.add('car');
     //Create LI
     const newCar = document.createElement('li');
-    newCar.innerText = 'Hey Niksy';
+    newCar.innerText = carInput.value;
     newCar.classList.add('car-item');
     carDiv.appendChild(newCar);
     //Add trash button
@@ -26,4 +26,21 @@ function addCar(event) {
     carDiv.appendChild(trashButton);
     //Append to List
     carList.appendChild(carDiv);
+    //Clear Car Input Value
+    carInput.value = "";
 }
+
+function deleteCar(e) {
+    const item = e.target;
+    //Delete Car
+    if (item.classList[0] === 'trash-btn') {
+        const car = item.parentElement;
+        car.remove();
+
+        //Animation
+        // car.classList.add("fall");
+        // car.addEventListener('transitionend', function () {
+        //     car.remove();
+        // })
+    }
+};
