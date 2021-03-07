@@ -1,8 +1,8 @@
 body {
     display: grid;
-    grid-template-areas: "header header header" "nav article ads" "footer footer footer";
-    grid-template-rows: 80px 1fr 70px;
+    grid-template-areas: "nav header header" "nav article ads" "nav footer footer";
     grid-template-columns: 35% 1fr 15%;
+    grid-template-rows: 80px 1fr 70px;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
     height: 100vh;
@@ -11,7 +11,7 @@ body {
 
 header, footer, article, nav {
     padding: 1.2em;
-    background: linear-gradient(120deg, #232526, #414345);
+    background: linear-gradient(45deg, #232526, #8a8f94);
 }
 
 h1, h2, h3, h4, h5, h6 {
